@@ -185,7 +185,7 @@ jobs:
           ref: builds/facebook-www
       - name: Ensure clean directory
         run: rm -rf compiled
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: compiled
           path: compiled/
@@ -223,7 +223,7 @@ jobs:
           token: ${{secrets.FBSOURCE_SYNC_PUSH_TOKEN}}
       - name: Ensure clean directory
         run: rm -rf compiled-rn
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: compiled-rn
           path: compiled-rn/
